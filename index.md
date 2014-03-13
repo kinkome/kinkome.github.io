@@ -1,11 +1,10 @@
+---
+layout: index
+---
+
 # Applications
 
-1. [[Motivation]]: Why do we need an infrastructure for kinko applications?
-2. [[General principles]]
-3. [[Implementation overview]]
-4. [[Layout of a kinko application]]
-5. [[The kinko Manifest file]]
-6. [[Services accessible to kinko applications]]
+<a name='Motivation'></a>
 
 ## Motivation
 
@@ -27,6 +26,12 @@ extend the functionality provided by her kinko box. Still, a 3rd party applicati
 Instead, a user will be able to install a 3rd party application by downloading it; the download will be verified, and then **the user will be asked whether or not she wants to grant permissions as asked by the application.**
 
 For example, a video chat application might want access to the list of email addresses of a user to help set up the chat. The video chat application will have no reason to access GnuPG keys of any email account in the system. In that case the kinko db manager will export a permission "readaccounts" (or, in full, "kinko-db-readaccounts"), which lets the video chat application access just that piece of information.
+
+
+____________
+
+
+<a name='General_principles'></a>
 
 ## General principles
 
@@ -81,10 +86,11 @@ Each application can be in one of these states:
 
 Applications are run via a process manager. The final version will use `monit` to monitor processes and resources. An development environment might use `foreman` instead.
 
+____________
 
-> Back to [[Kinko Applications]].
+<a name='Implementation_overview'></a>
 
-The following text describes basic ideas behind parts of the implementation of the kinko core system
+## Implementation Overview
 
 ### Application directory layout
 
@@ -128,14 +134,30 @@ Applications may contain a web configuration applet. These are integrated into t
 To help developers building 3rd party apps an application may provide a test infrastructure. When the kinko system is configured to do so, all applications' test scripts will be run during the installation of an application.
 
 
+____________
+
+
+<a name='Layout_of_a_kinko_application'></a>
+
 ## Layout of a Kinko application
 
 TBD
 
 
+____________
+
+
+<a name='The_kinko_Manifest_file'></a>
+
 ## The kinko Manifest file
 
 TBD
+
+
+____________
+
+
+<a name='Services_accessible_to_kinko_applications'></a>
 
 ## Services accessible to kinko applications
 

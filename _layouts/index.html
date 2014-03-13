@@ -16,11 +16,59 @@
     <div class="wrapper">
       <header>
         <h1>Kinkome.github.io</h1>
-        <p>The kinkome.github.io website</p>
-
-
-        <p class="view"><a href="https://github.com/kinkome">View My GitHub Profile</a></p>
-
+        <p>Privacy starts in your home!</p>
+        <style type="text/css" media="screen">
+        a {
+          color: orange;
+        }
+        header ul.reset, header ul.reset ul {
+            background: none;
+            box-shadow: none;
+            height: default;
+            list-style: disc inside none;
+            padding: 0;
+            width: inherit;
+            height: inherit;
+            border: none;
+        }
+        
+        header ul.reset {
+          font-weight: bold;
+          list-style: none outside none;
+        }
+        
+        header ul.reset li {
+          border: none;
+          float: none;
+          height: inherit;
+          width: inherit;
+        }
+        header ul.reset li a {
+          display: inline;
+          color: orange;
+          font-weight: bold;
+        }
+        </style>
+        <ul class="reset">
+          <li>
+            <p>Kinko Applications</p>
+            <ul>
+              <li><a href='#Motivation'>Motivation</a></li>
+              <li><a href='#General_principles'>General principles</a></li>
+              <li><a href='#Implementation_overview'>Implementation overview</a></li>
+              <li><a href='#Layout_of_a_kinko_application'>Layout of a kinko application</a></li>
+              <li><a href='#The_kinko_Manifest_file'>The kinko Manifest file</a></li>
+              <li><a href='#Services_accessible_to_kinko_applications'>Services accessible to kinko applications</a></li>
+            </ul>
+          </li>
+          <li>
+            <p>Online resources</p>
+            <ul>
+              <li><a href="https://kinko.me">The kinko.me website</a></li>
+              <li><a href="https://github.com/kinkome">Find us on GitHub</a></li>
+            </ul>
+          </li>
+        </ul>
       </header>
       <section>
         {{content}}

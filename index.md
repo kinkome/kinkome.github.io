@@ -2,6 +2,10 @@
 layout: index
 ---
 
+> Note: The following is preliminary information. While we try our best to keep it
+> accurate, we cannot promise to never make mistakes. If you find some errors here,
+> please drop us a note at [contact@kinko.me](mailto:contact@kinko.me).
+
 <h1 id="about" class="page-header">Privacy starts in your home! <small><a href="#email">Next: E-mail encryption</a></small></h1>
 
 [kinko.me](https://kinko.me) implements an en/decrypting SMTP- and IMAP-proxy on ARM-class hardware, the kinko box. Emails are synced from the users' email accounts via IMAP to the box and are stored in plaintext in a secure storage area on the box. The kinko box also includes a webmailer to be able to use email with the browser.
@@ -116,7 +120,10 @@ Initially there are two mail pipelines in the system:
 	- kinko-gpg-encrypt
 	- kinko-mail-forward
 
-<h1 id="device" class="page-header">Device discovery and setup! <small><a href='#applications'>Next: Kinko applications</a></small></h1>
+<h1 id="device" class="page-header">Device discovery and setup <small><a href='#applications'>Next: Kinko applications</a></small></h1>
+
+So how do we make sure the communication between a user and her kinko installation
+is really private? This is where the kinko box comes into play.
 
 <h2 id='device-setup'></h2>
 ## Device setup process

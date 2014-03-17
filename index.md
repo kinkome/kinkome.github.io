@@ -19,6 +19,33 @@ Initially kinko is used to provide pretty secure email for everyone - regardless
 level of its users. To provide backwards compatibility with existing solutions for both email and
 email encryption kinko is built on top of legacy email protocols (SMTP,IMAP) and crypto (PGP).
 
+
+<h2 id='email-legacy'></h2>
+## Using IMAP and SMTP with kinko
+
+1. Once installed, the kinko box becomes available under a unique name such as *pinkpony.kinko.me*. 
+	The kinko box provides an SMTP and an IMAP server under that name; IMAP and SMTP must be 
+	configured to use that instead of the original mail server settings.
+
+1. When **an email is sent via SMTP**, the email enters the kinko mail pipeline; and, in due course, 
+	will be encrypted using the PGP keys stored on the keys, and then submitted to the original mail 
+	server. This process will work synchronously - that means that if the original mail server rejects 
+	the email for whatever reason, kinko does not accept it either, and the mail client will show an error message.
+
+1. When the kinko box is powered on, it constantly synchronizes the original mail IMAP server. When an
+	email arrives there (say: you write to contact@kinko.me), it will be picked up by the synchronization 
+	process, will be decrypted on the kinko box, potentially parsed for spam, and then stored in the IMAP 
+	server on the kinko box. This is where it becomes available for the user, in its decrypted form.
+
+<h2 id='email-webmail'></h2>
+## Using webmail with kinko
+
+kinko comes with a preconfigured webmailer. One can use the webmailer to access the emails of her
+accounts on the kinko system by opening the unique URL in the browser, e.g. *https://pinkpony.kinko.me*.
+
+(We are currently using roundcube-email, but this might change)
+
+
 <h2 id='email-gpg'></h2>
 ## PGP as used by kinko
 

@@ -2,7 +2,7 @@
 layout: index
 ---
 
-<h1 id="about" class="page-header">Privacy starts in your home! <small><a href="https://kinko.me">About kinko.me</a></small></h1>
+<h1 id="about" class="page-header">Privacy starts in your home! <small><a href="#email">Next: E-mail encryption</a></small></h1>
 
 [kinko.me](https://kinko.me) implements an en/decrypting SMTP- and IMAP-proxy on ARM-class hardware, the kinko box. Emails are synced from the users' email accounts via IMAP to the box and are stored in plaintext in a secure storage area on the box. The kinko box also includes a webmailer to be able to use email with the browser.
 
@@ -13,7 +13,7 @@ kinko uses GnuPG for encryption, with the addition of encrypting the email subje
 Both the kinko box software and the routing service's software are open sourced.
 
 
-<h1 id="email" class="page-header">E-mail encryption</h1>
+<h1 id="email" class="page-header">E-mail encryption <small><a href='#device'>Next: Device discovery and setup</a></small></h1>
 
 Initially kinko is used to provide pretty secure email for everyone - regardless of the tech skill
 level of its users. To provide backwards compatibility with existing solutions for both email and
@@ -89,10 +89,7 @@ Initially there are two mail pipelines in the system:
 	- kinko-gpg-encrypt
 	- kinko-mail-forward
 
-
-
-
-<h1 id="device" class="page-header">Device discovery and setup! </h1>
+<h1 id="device" class="page-header">Device discovery and setup! <small><a href='#applications'>Next: Kinko applications</a></small></h1>
 
 <h2 id='device-setup'></h2>
 ## Device setup process
@@ -109,11 +106,7 @@ TBD
 
 TBD
 
-
-
-
-
-<h1 id="applications" class="page-header">Applications </h1>
+<h1 id="applications" class="page-header">Applications <small><a href='#top'>Top</a></small></h1>
 
 <h2 id='applications-motivation'></h2>
 
@@ -263,3 +256,13 @@ TBD
 TBD
 
 
+<h2 id='applications-services'></h2>
+
+## Services accessible to kinko applications
+
+TBD
+
+
+<h1 id="online-resources" class="page-header">Online resources!</h1>
+
+TBD

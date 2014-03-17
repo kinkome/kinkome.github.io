@@ -265,4 +265,8 @@ TBD
 
 <h1 id="online-resources" class="page-header">Online resources!</h1>
 
-TBD
+Find us
+
+- **on the web:** [https://kinko.me](https://kinko.me)
+- **on github:** [http://github.com/kinkome](http://github.com/kinkome)
+- **on facebook:** [http://facebook.com/kinko.me](http://facebook.com/kinko.me)

@@ -208,7 +208,7 @@ The kinko core system (based on Debian) provides a number of facilities for appl
 - automatic start and stop of applications
 - application events
 - secure communication between applications
-- user notifications (kinko-notify)
+- user notifications
 - simple to use permission system
 - integration into kinko web configuration frontend
 - automatic testing
@@ -252,15 +252,6 @@ Applications are run via a process manager. The final version will use `monit` t
 
 ## Implementation Overview
 
-### Application directory layout
-
-Each application has to adhere to a specific directory layout. For a full explanation see [[Layout-of-a-kinko-application]]. However, the main idea is like this:
-
-- A `./bin` path contains binaries to be used from the application
-- The `./var` path may be used to hold data used during runtime. The path will point to encrypted
-  storage for applications at stage 2 or later.
-- The `./etc` path may be used to hold configuration data. Such data is considered user input and will be included in the configuration backup.
-  
 ### Secure Storage
 
 Secure storage is implemented using Linux disk encryption.
@@ -281,7 +272,7 @@ That means an application may provide a number of permissions (that will turn in
 
 Applications may define events and subscribe to events. The kinko event system is very simple; a subscribing application only gets to know that an event occurred and when it occurred for the last time. It is not possible to attach data to an event.
 
-### User notifications (kinko-notify)
+### User notifications
 
 Applications can notify the user about important events that might require user interaction. The user will see notifications in her kinko desktop app.
 
@@ -298,30 +289,53 @@ To help developers building 3rd party apps an application may provide a test inf
 
 ## Layout of a Kinko application
 
-TBD
+A kinko application is contained in a single directory. Some entries in this directory have special 
+meaning, including
+
+- `Manifest`: the *Manifest* file describes the basic properties of the kinko application,
+- `Permissions`: the *Permissions* file describing additional permissions provided by the application,
+- `./app`: assets used to describe the application in the kinko installer (icon, description, etc.),
+- `./bin`: commands usable for other apps to interact with this app, as controlled by the permissions system,
+- `./sbin`: commands called from the kinko base system to install, configure, and start the application, 
+- `./var`: private storage space. This is a symlink controlled by the kinko base system,
+- `./var/public`: public storage space, can be shared with other applications,
+- `./var/etc`: configuration data for this application, will be included in the configuration backup,
+- `./ui`: the static assets for UI components.
 
 
+Note: The `./var` path will point to encrypted storage for applications at stage 2 or later.
 
 <h2 id='applications-manifest'></h2>
 
 ## The kinko Manifest file
 
-TBD
+The kinko `./Manifest` file describes basic properties of the kinko application. The following is a
+very short example:
 
+	# os_dependencies: this OS packages must be installed
+	# on the system.
+	os_dependencies=mimegpg gnupg-agent cpanm
+
+	# which permissions are made available by this application. 
+	# Note: a permission MUST start with the name of the app and a dash; 
+	# e.g. "gpg-keyreader" would be a valid name.
+	permissions=gpg-crypto gpg-writekeys gpg-readkeys
+
+	# which permissions are required by this application.
+	required_permissions=db-read
 
 <h2 id='applications-services'></h2>
-
 ## Services accessible to kinko applications
 
-TBD
+The kinko base system and some core applications provide some services for other applications.
+This includes some automatic services, including backup, secure storage, permissions, etc.
 
+In addition applications can use these services:
 
-<h2 id='applications-services'></h2>
-
-## Services accessible to kinko applications
-
-TBD
-
+- fire events (`event <name>`)
+- subscribing to events (`on <eventname> <command> <args>`)
+- notify the current user (`notify <user> <level> [ --url url ] <message>`)
+- interact with the current user (`ask <user> <level> [ --url url ] <message>`)
 
 <h1 id="online" class="page-header">Online resources! <small><a href='#top'>Top</a></small></h1>
 

@@ -23,6 +23,58 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <style type="text/css" media="screen">
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: black;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    body strong, body b {
+      font-weight: 600;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+    }
+    h1, h2   {
+      font-weight: 700;
+    }
+    
+    #et-logo {
+      font-family: 'Abel', sans-serif;
+    }
+    </style>
+    <!-- fonts end -->
+  
+    <!-- colors -->
+    <style type="text/css" media="screen">
+    a {
+      color: #ff0066;
+    }
+    
+    .bs-docs-sidebar .nav > .active > a, 
+    .bs-docs-sidebar .nav > .active:hover > a, 
+    .bs-docs-sidebar .nav > .active:focus > a {
+        border-left: 2px solid #ff0066;
+        color: #ff0066;
+    }
+    
+    .bs-docs-sidebar .nav > li > a:hover, 
+    .bs-docs-sidebar .nav > li > a:focus {
+        border-left: 1px solid #ff0066;
+        color: #ff0066;
+    }
+    </style>
+    <!-- colors end -->
+    
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
@@ -60,11 +112,43 @@
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content">
       <div class="container">
-        <h1>kinko.me</h1>
-        <p>Pretty easy privacy!</p>
-        <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+        <div id="et-logo">
+          <img alt="kinko.me | pretty easy privacy" width="129" height="52"
+            src="/assets/logo.png">
+          <span>
+          &ndash; pretty easy privacy
+          </span>
+        </div>
       </div>
     </div>
+    
+    <style type="text/css" media="screen">
+    .bs-docs-header {
+      background-color: black;
+      background-image: none;
+      height: 76px;
+      font-size: 11px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    #et-logo {
+      position: relative;
+      height: 64px;
+    }
+    #et-logo img {
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+    }
+    #et-logo span {
+      color: white;
+      position: absolute;
+      left: 136px;
+      bottom: 0;
+      font-size: 32px;
+    }
+    </style>
 
     <div class="container bs-docs-container">
       <div class="row">
@@ -108,11 +192,7 @@
                 </ul>
               </li>
               <li>
-                <a href='#'>Online resources</a>
-                <ul class="nav">
-                  <li><a href="https://kinko.me">The kinko.me website</a></li>
-                  <li><a href="https://github.com/kinkome">Find us on GitHub</a></li>
-                </ul>
+                <a href='#online-resources'>Online resources</a>
               </li>
             </ul>
     

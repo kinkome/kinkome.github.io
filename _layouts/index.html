@@ -1,111 +1,209 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kinkome.github.io by kinkome</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="kinko - pretty easy email encryption.">
+<meta name="keywords" content="kinko, email, encryption, privacy">
+<meta name="author" content="The kinko team">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<title>kinko.me</title>
+
+<!-- Bootstrap core CSS -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="http://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="http://getbootstrap.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>kinkome.github.io</h1>
-        <p>Privacy starts in your home!</p>
-        <style type="text/css" media="screen">
-        body {
-            color: black;
-            font: 400 14px/1.5 Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        }
-        a {
-          color: orange;
-        }
-        hr {
-          background-color: #ccc;
-        }
-        header ul.reset, header ul.reset ul {
-            background: none;
-            box-shadow: none;
-            height: default;
-            list-style: disc inside none;
-            padding: 0;
-            width: inherit;
-            height: inherit;
-            border: none;
-        }
-        
-        header ul.reset {
-          font-weight: bold;
-          list-style: none outside none;
-        }
-        
-        header ul.reset li {
-          border: none;
-          float: none;
-          height: inherit;
-          width: inherit;
-        }
-        header ul.reset li a {
-          display: inline;
-          color: orange;
-          font-weight: bold;
-        }
-        header {
-          position: inherit;
-        }
-        </style>
-        <ul class="reset">
-          <li>
-            <p>About kinko</p>
-            <ul>
-              <li><a href="/">TL;DR</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>E-mail encryption</p>
-            <ul>
-              <li><a href='email.html#gpg'>GPG as used by kinko</a></li>
-              <li><a href='email.html#mail_pipeline'>The kinko mail pipeline</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>Device discovery and setup</p>
-            <ul>
-              <li><a href='device.html#setup'>Device setup process</a></li>
-              <li><a href='device.html#discovery_process'>The device discovery process</a></li>
-              <li><a href='device.html#desktop'>The kinko desktop app</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>Kinko Applications</p>
-            <ul>
-              <li><a href='applications.html#Motivation'>Motivation</a></li>
-              <li><a href='applications.html#General_principles'>General principles</a></li>
-              <li><a href='applications.html#Implementation_overview'>Implementation overview</a></li>
-              <li><a href='applications.html#Layout_of_a_kinko_application'>Layout of a kinko application</a></li>
-              <li><a href='applications.html#The_kinko_Manifest_file'>The kinko Manifest file</a></li>
-              <li><a href='applications.html#Services_accessible_to_kinko_applications'>Services accessible to kinko applications</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>Online resources</p>
-            <ul>
-              <li><a href="https://kinko.me">The kinko.me website</a></li>
-              <li><a href="https://github.com/kinkome">Find us on GitHub</a></li>
-            </ul>
-          </li>
-        </ul>
-      </header>
-      <section>
-        {{content}}
-      </section>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+<!--
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../" class="navbar-brand">Bootstrap</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="../getting-started">Getting started</a></li>
+            <li><a href="../css">CSS</a></li>
+            <li><a href="../components">Components</a></li>
+            <li class="active"><a href="../javascript">JavaScript</a></li>
+            <li><a href="../customize">Customize</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://expo.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Expo</a></li>
+            <li><a href="http://blog.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+-->
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content">
+      <div class="container">
+        <h1>kinko.me</h1>
+        <p>Pretty easy privacy!</p>
+        <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-9" role="main">
+            <a name='top'></a>
+          
+            <div class="bs-docs-section">
+              {{content}}
+            </div>
+        </div>
+
+        <!-- sidebar menu -->
+        <div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              <li><a href='#about'>Privacy starts in your home!</a></li>
+              <li>
+                <a href='#email'>E-mail encryption</a>
+                <ul class="nav">
+                  <li><a href='#email-gpg'>GPG as used by kinko</a></li>
+                  <li><a href='#email-pipeline'>The kinko mail pipeline</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href='#device'>Device discovery and setup</a>
+                <ul class="nav">
+                  <li><a href='#device-setup'>Device setup process</a></li>
+                  <li><a href='#device-discovery'>The device discovery process</a></li>
+                  <li><a href='#device-desktop'>The kinko desktop app</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href='#applications'>Kinko Applications</a>
+                <ul class="nav">
+                  <li><a href='#applications-motivation'>Motivation</a></li>
+                  <li><a href='#applications-principles'>General principles</a></li>
+                  <li><a href='#applications-overview'>Implementation overview</a></li>
+                  <li><a href='#applications-layout'>Layout of a kinko application</a></li>
+                  <li><a href='#applications-manifest'>The kinko Manifest file</a></li>
+                  <li><a href='#applications-service'>Services accessible to kinko applications</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href='#'>Online resources</a>
+                <ul class="nav">
+                  <li><a href="https://kinko.me">The kinko.me website</a></li>
+                  <li><a href="https://github.com/kinkome">Find us on GitHub</a></li>
+                </ul>
+              </li>
+            </ul>
     
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div> <!-- container ends here -->
+
+    <!-- Footer ================================================== -->
+    <footer class="bs-docs-footer" role="contentinfo">
+      <div class="container">
+        <ul class="bs-docs-footer-links muted">
+          <li>Kinko is <a href="https://kinko.me">coming soon!</a></li>
+          <li>&middot;</li>
+          <li><a href="https://github.com/kinkome">GitHub</a></li>
+          <li>&middot;</li>
+          <li><a href="https://kinko.me">The kinko.me website</a></li>
+        </ul>
+        
+        <!--
+        <div class="bs-docs-social">
+          <ul class="bs-docs-social-buttons">
+            <li>
+              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=kinkome&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub">
+            
+              </iframe>
+            </li>
+            <li>
+              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub">
+            
+              </iframe>
+            </li>
+            <li class="follow-btn">
+              <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">
+                Follow @twbootstrap</a>
+            </li>
+            <li class="tweet-btn">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getbootstrap.com/" data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Bootstrap">
+                Tweet</a>
+            </li>
+          </ul>
+        </div>
+        -->
+
+        <p>Hosted on GitHub Pages</p>
+        <p>
+          Theme based on getbootstrap.com's styles. With thanks to 
+          <a href="http://twitter.com/mdo" target="_blank">@mdo</a> 
+          and <a href="http://twitter.com/fat" target="_blank">@fat</a>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+
+
+    <!-- 
+    <script>
+      window.twttr = (function (d,s,id) {
+      var t, js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+      js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+      }(document, "script", "twitter-wjs"));
+    </script>
+    -->
+      
+    <!-- Analytics ================================================== -->
+    <!-- 
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', 'gaug.es.data.site.id');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+    -->
+
   </body>
 </html>

@@ -106,7 +106,7 @@ TBD
 
 TBD
 
-<h1 id="applications" class="page-header">Applications <small><a href='#top'>Top</a></small></h1>
+<h1 id="applications" class="page-header">Applications <small><a href='#online'>Next: Online Resources</a></small></h1>
 
 <h2 id='applications-motivation'></h2>
 
@@ -263,7 +263,7 @@ TBD
 TBD
 
 
-<h1 id="online-resources" class="page-header">Online resources!</h1>
+<h1 id="online" class="page-header">Online resources! <small><a href='#top'>Top</a></small></h1>
 
 Find us
 

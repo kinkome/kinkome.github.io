@@ -128,17 +128,43 @@ is really private? This is where the kinko box comes into play.
 <h2 id='device-setup'></h2>
 ## Device setup process
 
-TBD
+When a kinko installation is powering up initially, it must be configured. For this it
+connects to a pipe2me server and requests a short-lived name and certificate.
+
+It then starts the device discovery process, which allows a user to take ownership of her
+kinko installation.
+
+Note: *pipe2me* is a client/server system, which tunnels TCP connections and provides security
+by automatic provisioning with certificates and domain names. For this *pipe2me* employs SSL and 
+SSH connections, with some configuration code provided by The kinko team. For more information
+check [https://github.com/kinkome/pipe2me](https://github.com/kinkome/pipe2me)
+and [https://github.com/kinkome/pipe2me-client](https://github.com/kinkome/pipe2me-client).
+
 
 <h2 id='device-discovery'></h2>
 ## The device discovery process
 
-TBD
+During startup an unconfigured kinko box announces itself via *zeroconf*. The kinko desktop app
+(see below) watches out for such notifications and allows a user to connect to her kinko box.
+
+Once the user connects to her kinko box, she is asked to provide a strong password to initialize
+disk encryption. A strong password suggestion will be provided.
 
 <h2 id='device-desktop'></h2>
 ## The kinko desktop app
 
-TBD
+The kinko desktop application combines the following functionality:
+
+- a **locked-down browser installation:** some components of the kinko installation
+  comes with a user interface which requires an HTML browser. As regular browsers
+  are inherently unsafe for security-critical code we provide a locked down installation
+  that, for example, prevents 3rd party browser plugins to be installed.
+
+- a **zeroconf browser** which watches the local network to allow the user to connect
+  to and configure a not-yet-configured kinko installation.
+
+- a **user notification** component, which allows the kinko box to notify the user and 
+  to interact with her (for example to ask for explicit key validation.)
 
 <h1 id="applications" class="page-header">Applications <small><a href='#online'>Next: Online Resources</a></small></h1>
 
